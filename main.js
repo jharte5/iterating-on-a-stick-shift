@@ -22,11 +22,21 @@ const makeSingular = function(dino) {
   }
 }
 
-const truncateSpecies = function() {
-  
+const truncateSpecies = function(dino) {
+  if (dino.species.length < 11) {
+    return dino
+  } else {
+    const truncatedDino = {
+    species: dino.species.slice(0,7) + '...',
+    period: dino.period,
+    carnivore: dino.carnivore,
+    extinct: dino.extinct
+    }
+    return truncatedDino
+  }
 }
 
-const makeExtinct = function() {
+const makeExtinct = function(dino) {
 
 }
 
