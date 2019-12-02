@@ -37,7 +37,16 @@ const truncateSpecies = function(dino) {
 }
 
 const makeExtinct = function(dino) {
+  if (dino.extinct !== true) {
 
+  }
+  const oldDino = {
+    species: dino.species,
+    period: dino.period,
+    carnivore: dino.carnivore,
+    extinct: true
+  }
+  return oldDino
 }
 
 module.exports = {
